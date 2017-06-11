@@ -1,8 +1,63 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.asus.chodz_na_piwko.MapsActivity" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:gravity="center"
+tools:layout="@layout/activity_maps">
+ <fragment
+     android:id="@+id/map"
+     android:name="com.google.android.gms.maps.SupportMapFragment"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     tools:context="com.example.asus.chodz_na_piwko.MapsActivity"
+     android:layout_alignParentTop="true"
+     android:layout_alignParentLeft="true"
+     android:layout_alignParentStart="true" />
+ <Button
+     android:id="@+id/wsp"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="Najbliższe \n miejsce"
+     android:visibility="visible"
+     android:background="#00B7EB"
+     android:layout_alignBottom="@+id/Zoom"
+     android:layout_toRightOf="@+id/Zoom"
+     android:layout_marginLeft="18dp"
+     android:textStyle="bold|italic"
+     android:textColor="#4169E1"
+     />
+
+<Button
+    android:id="@+id/Zoom"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Cały \n widok"
+    android:visibility="visible"
+    android:background="#00B7EB"
+    android:layout_alignParentBottom="true"
+    android:layout_marginLeft="18dp"
+    android:layout_marginBottom="18dp"
+    android:textStyle="bold|italic"
+    android:textColor="#4169E1"/>
+
+ <TextView
+     android:id="@+id/textView"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_below="@+id/switch1"
+     android:textColor="#4169E1" />
+
+ <Switch
+     android:id="@+id/switch1"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="Odległość"
+     android:gravity="fill_horizontal"
+     android:layout_alignParentTop="true"
+     android:layout_alignParentLeft="true"
+     android:layout_alignParentStart="true"
+     android:textColor="#4169E1"
+     android:checked="false"/>
+
+</RelativeLayout>
