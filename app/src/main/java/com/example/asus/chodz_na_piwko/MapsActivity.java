@@ -430,22 +430,28 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.InfoWind
 
         //Podaje godziny otwarcia wg dnia
         TextView txtHours = (TextView) view.findViewById(R.id.txtHours);
-        switch(day){
-            case Calendar.SUNDAY:
+        switch(day) {
+            case 1:
                 txtHours.setText(String.valueOf(nd.get(indeks)));
-            case Calendar.MONDAY:
+                break;
+            case 2:
                 txtHours.setText(String.valueOf(po.get(indeks)));
-            case Calendar.TUESDAY:
+                break;
+            case 3:
                 txtHours.setText(String.valueOf(ws.get(indeks)));
-            case Calendar.WEDNESDAY:
+                break;
+            case 4:
                 txtHours.setText(String.valueOf(ws.get(indeks)));
-            case Calendar.THURSDAY:
+                break;
+            case 5:
                 txtHours.setText(String.valueOf(cz.get(indeks)));
-            case Calendar.FRIDAY:
+                break;
+            case 6:
                 txtHours.setText(String.valueOf(pt.get(indeks)));
-            case Calendar.SATURDAY:
+                break;
+            case 7:
                 txtHours.setText(String.valueOf(sb.get(indeks)));
-
+                break;
         }
         return view;
     }
